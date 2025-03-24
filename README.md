@@ -45,33 +45,7 @@ python tournoi/main.py
 
 ## ⚙️ Arborescence du projet
 
-Projet4_Tournoi/
-│
-├── tournoi/
-│   ├── main.py                    # Point d'entrée principal
-│   ├── controllers/               # Logique métier
-│   │   └── tournament_controller.py
-│   ├── models/                    # Modèles POO : joueurs, matchs, rounds, etc.
-│   │   ├── player.py
-│   │   ├── tournament.py
-│   │   ├── round.py
-│   │   └── data_manager.py
-│   ├── views/                     # Affichage console
-│   │   └── display.py
-│   ├── data/                      # Sauvegarde JSON
-│   │   ├── players.json
-│   │   └── tournaments.json
-│   └── utils/                     # Exports HTML / Markdown
-│       ├── html_exporter.py
-│       └── markdown_exporter.py
-│
-├── exports/                       # Fichiers générés (HTML, Markdown)
-│
-├── flake8_rapport/                # Rapport PEP8 (généré par flake8-html)
-│
-├── requirements.txt               # Dépendances
-└── README.md                      # Présent fichier
-
+<pre><code> ``` Projet4_Tournoi/ ├── tournoi/ │ ├── main.py │ ├── controllers/ │ │ └── tournament_controller.py │ ├── models/ │ │ ├── player.py │ │ ├── tournament.py │ │ ├── round.py │ │ └── data_manager.py │ ├── views/ │ │ └── display.py │ ├── data/ │ │ ├── players.json │ │ └── tournaments.json │ └── utils/ │ ├── html_exporter.py │ └── markdown_exporter.py ├── exports/ ├── flake8_rapport/ ├── requirements.txt └── README.md ``` </code></pre>
 
 ## ⚙️ Démo rapide
 
@@ -102,13 +76,17 @@ Format accepté : 1-0, 0.5-0.5, 0-1
 ✔️ Pas d'erreur bloquante à la soumission ✅
 
 
-## ⚙️ Captures d’écran
+## 📸 Captures d’écran
 
+###  Menu principal
+![interface_console.PNG](captures/interface_console.PNG)
+![markdown_tournoi.PNG](captures/markdown_tournoi.PNG)
+###  Classement
+![Tournoi_en_cours.PNG](captures/Tournoi_en_cours.PNG)
 
-![interface_console.PNG](captures%20d%27ecran/interface_console.PNG)
-![Tournoi_en_cours.PNG](captures%20d%27ecran/Tournoi_en_cours.PNG)
-![html_tournoi.PNG](captures%20d%27ecran/html_tournoi.PNG)
-![markdown_tournoi.PNG](captures%20d%27ecran/markdown_tournoi.PNG)
+###  Rapport HTML
+![html_tournoi.PNG](captures/html_tournoi.PNG)
+
 
 
 ## ⚙️ Bonus & Extensions
