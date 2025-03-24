@@ -7,92 +7,56 @@ class DataManager:
 
     def __init__(self, data_folder="data"):
         self.data_folder = data_folder
-        os.makedirs(self.data_folder, exist_ok=True)  # 📂 Crée le dossier si besoin
+        os.makedirs(self.data_folder, exist_ok=True)
         self.players_file = os.path.join(self.data_folder, "players.json")
         self.tournaments_file = os.path.join(self.data_folder, "tournaments.json")
 
-    # ✅ Gestion des joueurs
+    # 🔹 Gestion des joueurs
     def save_players(self, players):
-        """💾 Sauvegarde une liste de joueurs dans players.json"""
+        from .player import Player
         with open(self.players_file, "w", encoding="utf-8") as file:
             json.dump([player.to_dict() for player in players], file, indent=4, ensure_ascii=False)
         print(f"[INFO] 📂 Joueurs sauvegardés dans {self.players_file}")
 
     def load_players(self):
-        """📂 Charge les joueurs depuis players.json"""
-        from models.player import Player  # ✅ Import différé pour éviter le problème circulaire
-
+        from .player import Player
         if not os.path.exists(self.players_file):
-            print(f"[WARN] 📂 Aucun fichier trouvé : {self.players_file}")
+            print(f"[WARN] Aucun fichier trouvé : {self.players_file}")
             return []
-
         with open(self.players_file, "r", encoding="utf-8") as file:
             try:
-                players_data = json.load(file)
-                return [Player.from_dict(data) for data in players_data]
+                data = json.load(file)
+                return [Player.from_dict(p) for p in data]
             except json.JSONDecodeError:
-                print(f"[ERREUR] 📂 Fichier JSON corrompu : {self.players_file}")
+                print(f"[ERREUR] Fichier JSON corrompu : {self.players_file}")
                 return []
 
     def add_player(self, player):
-        """
-        ➕ Ajoute un joueur à players.json s’il n’existe pas encore (via son identifiant).
-        :param player: Instance de Player
-        :return: True si ajouté, False sinon
-        """
         players = self.load_players()
-        if any(p.id == player.id for p in players):
-            print(f"[⚠️] Le joueur avec l’ID {player.id} existe déjà.")
+        if any(p.chess_id == player.chess_id for p in players):
+            print(f"[⛔] Un joueur avec l’ID {player.chess_id} existe déjà.")
             return False
-
         players.append(player)
         self.save_players(players)
-        print(f"[✅] Joueur {player.prenom} {player.nom} ajouté avec succès.")
+        print(f"[✅] Joueur {player.first_name} {player.last_name} ajouté avec succès.")
         return True
 
-    # ✅ Gestion des tournois
+    # 🔹 Gestion des tournois
     def save_tournaments(self, tournaments):
-        """💾 Sauvegarde une liste de tournois dans tournaments.json"""
+        from .tournament import Tournament
         with open(self.tournaments_file, "w", encoding="utf-8") as file:
-            json.dump([tournament.to_dict() for tournament in tournaments], file, indent=4, ensure_ascii=False)
+            json.dump([t.to_dict() for t in tournaments], file, indent=4, ensure_ascii=False)
         print(f"[INFO] 📂 Tournois sauvegardés dans {self.tournaments_file}")
 
     def load_tournaments(self):
-        """📂 Charge les tournois depuis tournaments.json"""
-        from models.tournament import Tournament  # ✅ Import différé pour éviter le problème circulaire
-
+        from .tournament import Tournament
         if not os.path.exists(self.tournaments_file):
-            print(f"[WARN] 📂 Aucun fichier trouvé : {self.tournaments_file}")
+            print(f"[WARN] Aucun fichier trouvé : {self.tournaments_file}")
             return []
-
         with open(self.tournaments_file, "r", encoding="utf-8") as file:
             try:
-                tournaments_data = json.load(file)
-                return [Tournament.from_dict(data) for data in tournaments_data]
+                data = json.load(file)
+                return [Tournament.from_dict(t) for t in data]
             except json.JSONDecodeError:
-                print(f"[ERREUR] 📂 Fichier JSON corrompu : {self.tournaments_file}")
+                print(f"[ERREUR] Fichier JSON corrompu : {self.tournaments_file}")
                 return []
-
-
-if __name__ == "__main__":
-    from models.player import Player  # ✅ Import uniquement pour les tests
-
-    manager = DataManager()
-
-    # 🔹 Création de joueurs test
-    p1 = Player("Enoto", "Stevi", "30-07-1977", "fr12345")
-    p2 = Player("Mentor", "Fred", "01-01-1997", "fr11223")
-    p3 = Player("Dupond", "Robert", "30-07-1979", "fr123456")
-    p4 = Player("Menton", "Fab", "01-01-1997", "fr112233")
-
-    # 🔽 Ajout d’un joueur unique
-    manager.add_player(p1)
-    manager.add_player(p2)
-    manager.add_player(p3)
-    manager.add_player(p4)
-
-    # 🔽 Chargement des joueurs
-    loaded_players = manager.load_players()
-    print("\n[INFO] 📂 Joueurs chargés depuis JSON :")
-    for player in loaded_players:
-        print(player)

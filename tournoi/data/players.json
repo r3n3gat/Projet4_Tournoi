@@ -19,5 +19,12 @@
         "birth_date": "19/08/1981",
         "chess_id": "fr753423",
         "score": 0
+    },
+    {
+        "last_name": "enoto",
+        "first_name": "stevi",
+        "birth_date": "30/07/1977",
+        "chess_id": "fr456321",
+        "score": 0
     }
 ]

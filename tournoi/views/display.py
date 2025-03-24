@@ -1,6 +1,3 @@
-from pprint import pprint
-
-
 def afficher_menu_principal():
     print("\n=== MENU PRINCIPAL ===")
     print("1. 🎮 Gérer les joueurs")
@@ -13,6 +10,7 @@ def afficher_liste_joueurs(joueurs):
     if not joueurs:
         print("Aucun joueur disponible.")
         return
+
     print(f"{'ID':<10} {'Nom':<15} {'Prénom':<15} {'Naissance':<12} {'Score':<6}")
     print("-" * 60)
     for joueur in joueurs:
@@ -24,6 +22,7 @@ def afficher_liste_tournois(tournois):
     if not tournois:
         print("Aucun tournoi enregistré.")
         return
+
     for i, t in enumerate(tournois, 1):
         print(f"{i}. {t.nom} - {t.lieu} ({t.date_debut} → {t.date_fin})")
 
@@ -33,9 +32,10 @@ def afficher_classement(joueurs):
     if not joueurs:
         print("Aucun joueur.")
         return
+
     joueurs_tries = sorted(joueurs, key=lambda j: j.score, reverse=True)
     for i, joueur in enumerate(joueurs_tries, 1):
-        print(f"{i}. {joueur.first_name} {joueur.last_name} - {joueur.score} pts")
+        print(f"{i}. {joueur.first_name} {joueur.last_name} - {joueur.score:.1f} pts")
 
 
 def message_info(msg):

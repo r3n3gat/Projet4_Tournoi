@@ -441,17 +441,329 @@
                 "first_name": "Martin",
                 "birth_date": "01/09/2020",
                 "chess_id": "fr321654",
-                "score": 0
+                "score": 3.0
             },
             {
                 "last_name": "Martin",
                 "first_name": "Sonia",
                 "birth_date": "19/08/1981",
                 "chess_id": "fr789456",
-                "score": 0
+                "score": 1.0
             }
         ],
-        "rounds": [],
+        "rounds": [
+            {
+                "nom": "Round 1",
+                "start_date": "2025-03-24 22:58:24.913311",
+                "end_date": "2025-03-24 22:58:39.571276",
+                "matchs": [
+                    {
+                        "player1": {
+                            "last_name": "Romeo",
+                            "first_name": "Martin",
+                            "birth_date": "01/09/2020",
+                            "chess_id": "fr321654",
+                            "score": 3.0
+                        },
+                        "player2": {
+                            "last_name": "Martin",
+                            "first_name": "Sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr789456",
+                            "score": 1.0
+                        },
+                        "score1": 1.0,
+                        "score2": 0.0
+                    }
+                ]
+            },
+            {
+                "nom": "Round 2",
+                "start_date": "2025-03-24 22:58:48.539758",
+                "end_date": "2025-03-24 22:58:56.959024",
+                "matchs": [
+                    {
+                        "player1": {
+                            "last_name": "Romeo",
+                            "first_name": "Martin",
+                            "birth_date": "01/09/2020",
+                            "chess_id": "fr321654",
+                            "score": 3.0
+                        },
+                        "player2": {
+                            "last_name": "Martin",
+                            "first_name": "Sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr789456",
+                            "score": 1.0
+                        },
+                        "score1": 0.0,
+                        "score2": 1.0
+                    }
+                ]
+            },
+            {
+                "nom": "Round 3",
+                "start_date": "2025-03-24 22:59:08.546116",
+                "end_date": "2025-03-24 22:59:16.553902",
+                "matchs": [
+                    {
+                        "player1": {
+                            "last_name": "Romeo",
+                            "first_name": "Martin",
+                            "birth_date": "01/09/2020",
+                            "chess_id": "fr321654",
+                            "score": 3.0
+                        },
+                        "player2": {
+                            "last_name": "Martin",
+                            "first_name": "Sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr789456",
+                            "score": 1.0
+                        },
+                        "score1": 1.0,
+                        "score2": 0.0
+                    }
+                ]
+            },
+            {
+                "nom": "Round 4",
+                "start_date": "2025-03-24 22:59:29.691919",
+                "end_date": "2025-03-24 22:59:44.896942",
+                "matchs": [
+                    {
+                        "player1": {
+                            "last_name": "Romeo",
+                            "first_name": "Martin",
+                            "birth_date": "01/09/2020",
+                            "chess_id": "fr321654",
+                            "score": 3.0
+                        },
+                        "player2": {
+                            "last_name": "Martin",
+                            "first_name": "Sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr789456",
+                            "score": 1.0
+                        },
+                        "score1": 1.0,
+                        "score2": 0.0
+                    }
+                ]
+            }
+        ],
         "remarques": "tournoi rapide de test"
+    },
+    {
+        "nom": "rouen",
+        "lieu": "colysée",
+        "date_debut": "25/03/2025",
+        "date_fin": "26/03/2025",
+        "joueurs": [
+            {
+                "last_name": "enoto",
+                "first_name": "stevi",
+                "birth_date": "30/07/1977",
+                "chess_id": "fr456321",
+                "score": 4.0
+            },
+            {
+                "last_name": "Martin",
+                "first_name": "Sonia",
+                "birth_date": "19/08/1981",
+                "chess_id": "fr789456",
+                "score": 0.0
+            },
+            {
+                "last_name": "Romeo",
+                "first_name": "Martin",
+                "birth_date": "01/09/2020",
+                "chess_id": "fr321654",
+                "score": 2.0
+            },
+            {
+                "last_name": "martin sonia",
+                "first_name": "sonia",
+                "birth_date": "19/08/1981",
+                "chess_id": "fr753423",
+                "score": 2.0
+            }
+        ],
+        "rounds": [
+            {
+                "nom": "Round 1",
+                "start_date": "2025-03-24 23:02:28.706931",
+                "end_date": "2025-03-24 23:02:43.742771",
+                "matchs": [
+                    {
+                        "player1": {
+                            "last_name": "Romeo",
+                            "first_name": "Martin",
+                            "birth_date": "01/09/2020",
+                            "chess_id": "fr321654",
+                            "score": 2.0
+                        },
+                        "player2": {
+                            "last_name": "Martin",
+                            "first_name": "Sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr789456",
+                            "score": 0.0
+                        },
+                        "score1": 1.0,
+                        "score2": 0.0
+                    },
+                    {
+                        "player1": {
+                            "last_name": "martin sonia",
+                            "first_name": "sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr753423",
+                            "score": 2.0
+                        },
+                        "player2": {
+                            "last_name": "enoto",
+                            "first_name": "stevi",
+                            "birth_date": "30/07/1977",
+                            "chess_id": "fr456321",
+                            "score": 4.0
+                        },
+                        "score1": 0.0,
+                        "score2": 1.0
+                    }
+                ]
+            },
+            {
+                "nom": "Round 2",
+                "start_date": "2025-03-24 23:02:55.486309",
+                "end_date": "2025-03-24 23:03:18.987994",
+                "matchs": [
+                    {
+                        "player1": {
+                            "last_name": "Romeo",
+                            "first_name": "Martin",
+                            "birth_date": "01/09/2020",
+                            "chess_id": "fr321654",
+                            "score": 2.0
+                        },
+                        "player2": {
+                            "last_name": "enoto",
+                            "first_name": "stevi",
+                            "birth_date": "30/07/1977",
+                            "chess_id": "fr456321",
+                            "score": 4.0
+                        },
+                        "score1": 0.0,
+                        "score2": 1.0
+                    },
+                    {
+                        "player1": {
+                            "last_name": "Martin",
+                            "first_name": "Sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr789456",
+                            "score": 0.0
+                        },
+                        "player2": {
+                            "last_name": "martin sonia",
+                            "first_name": "sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr753423",
+                            "score": 2.0
+                        },
+                        "score1": 0.0,
+                        "score2": 1.0
+                    }
+                ]
+            },
+            {
+                "nom": "Round 3",
+                "start_date": "2025-03-24 23:03:21.820699",
+                "end_date": "2025-03-24 23:03:33.625438",
+                "matchs": [
+                    {
+                        "player1": {
+                            "last_name": "enoto",
+                            "first_name": "stevi",
+                            "birth_date": "30/07/1977",
+                            "chess_id": "fr456321",
+                            "score": 4.0
+                        },
+                        "player2": {
+                            "last_name": "Martin",
+                            "first_name": "Sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr789456",
+                            "score": 0.0
+                        },
+                        "score1": 1.0,
+                        "score2": 0.0
+                    },
+                    {
+                        "player1": {
+                            "last_name": "Romeo",
+                            "first_name": "Martin",
+                            "birth_date": "01/09/2020",
+                            "chess_id": "fr321654",
+                            "score": 2.0
+                        },
+                        "player2": {
+                            "last_name": "martin sonia",
+                            "first_name": "sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr753423",
+                            "score": 2.0
+                        },
+                        "score1": 1.0,
+                        "score2": 0.0
+                    }
+                ]
+            },
+            {
+                "nom": "Round 4",
+                "start_date": "2025-03-24 23:03:36.132816",
+                "end_date": "2025-03-24 23:04:04.377867",
+                "matchs": [
+                    {
+                        "player1": {
+                            "last_name": "enoto",
+                            "first_name": "stevi",
+                            "birth_date": "30/07/1977",
+                            "chess_id": "fr456321",
+                            "score": 4.0
+                        },
+                        "player2": {
+                            "last_name": "Martin",
+                            "first_name": "Sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr789456",
+                            "score": 0.0
+                        },
+                        "score1": 1.0,
+                        "score2": 0.0
+                    },
+                    {
+                        "player1": {
+                            "last_name": "Romeo",
+                            "first_name": "Martin",
+                            "birth_date": "01/09/2020",
+                            "chess_id": "fr321654",
+                            "score": 2.0
+                        },
+                        "player2": {
+                            "last_name": "martin sonia",
+                            "first_name": "sonia",
+                            "birth_date": "19/08/1981",
+                            "chess_id": "fr753423",
+                            "score": 2.0
+                        },
+                        "score1": 0.0,
+                        "score2": 1.0
+                    }
+                ]
+            }
+        ],
+        "remarques": "demi finale"
     }
 ]

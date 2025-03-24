@@ -30,16 +30,16 @@ class PlayerController:
 
     def add_player(self):
         print("\n=== ➕ AJOUTER UN JOUEUR ===")
-        nom = input("Nom : ")
-        prenom = input("Prénom : ")
-        date_naissance = input("Date de naissance (jj-mm-aaaa) : ")
-        identifiant = input("Identifiant national (ex : AB12345) : ")
+        last_name = input("Nom : ")
+        first_name = input("Prénom : ")
+        birth_date = input("Date de naissance (jj-mm-aaaa) : ")
+        chess_id = input("Identifiant national (ex : AB12345) : ")
 
-        new_player = Player(nom, prenom, date_naissance, identifiant)
+        new_player = Player(last_name, first_name, birth_date, chess_id)
         success = self.data_manager.add_player(new_player)
 
         if success:
-            display.message_succes(f"Joueur {prenom} {nom} ajouté.")
+            display.message_succes(f"Joueur {first_name} {last_name} ajouté.")
         else:
             display.message_erreur("Échec : identifiant déjà utilisé.")
 
