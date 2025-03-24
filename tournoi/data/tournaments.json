@@ -1,0 +1,213 @@
+[
+    {
+        "name": "Championnat Local",
+        "location": "Paris",
+        "start_date": "2025-06-01",
+        "end_date": "2025-06-05",
+        "players": [
+            {
+                "last_name": "Enoto",
+                "first_name": "Stevi",
+                "birth_date": "30-07-1977",
+                "chess_id": "fr12345",
+                "score": 0
+            },
+            {
+                "last_name": "Mentor",
+                "first_name": "Fred",
+                "birth_date": "01-01-1997",
+                "chess_id": "fr11223",
+                "score": 0
+            },
+            {
+                "last_name": "Dupond",
+                "first_name": "Robert",
+                "birth_date": "30-07-1979",
+                "chess_id": "fr123456",
+                "score": 0
+            },
+            {
+                "last_name": "Menton",
+                "first_name": "Fab",
+                "birth_date": "01-02-1990",
+                "chess_id": "fr112233",
+                "score": 0
+            }
+        ],
+        "rounds": [
+            {
+                "name": "Round 1",
+                "matches": [
+                    {
+                        "player1": {
+                            "last_name": "Dupond",
+                            "first_name": "Robert",
+                            "birth_date": "30-07-1979",
+                            "chess_id": "fr123456",
+                            "score": 0
+                        },
+                        "player2": {
+                            "last_name": "Enoto",
+                            "first_name": "Stevi",
+                            "birth_date": "30-07-1977",
+                            "chess_id": "fr12345",
+                            "score": 0
+                        },
+                        "score1": 0,
+                        "score2": 0
+                    },
+                    {
+                        "player1": {
+                            "last_name": "Menton",
+                            "first_name": "Fab",
+                            "birth_date": "01-02-1990",
+                            "chess_id": "fr112233",
+                            "score": 0
+                        },
+                        "player2": {
+                            "last_name": "Mentor",
+                            "first_name": "Fred",
+                            "birth_date": "01-01-1997",
+                            "chess_id": "fr11223",
+                            "score": 0
+                        },
+                        "score1": 0,
+                        "score2": 0
+                    }
+                ],
+                "start_date": "2025-03-18 16:54:46.313134",
+                "end_date": null
+            },
+            {
+                "name": "Round 2",
+                "matches": [
+                    {
+                        "player1": {
+                            "last_name": "Enoto",
+                            "first_name": "Stevi",
+                            "birth_date": "30-07-1977",
+                            "chess_id": "fr12345",
+                            "score": 0
+                        },
+                        "player2": {
+                            "last_name": "Mentor",
+                            "first_name": "Fred",
+                            "birth_date": "01-01-1997",
+                            "chess_id": "fr11223",
+                            "score": 0
+                        },
+                        "score1": 0,
+                        "score2": 0
+                    },
+                    {
+                        "player1": {
+                            "last_name": "Dupond",
+                            "first_name": "Robert",
+                            "birth_date": "30-07-1979",
+                            "chess_id": "fr123456",
+                            "score": 0
+                        },
+                        "player2": {
+                            "last_name": "Menton",
+                            "first_name": "Fab",
+                            "birth_date": "01-02-1990",
+                            "chess_id": "fr112233",
+                            "score": 0
+                        },
+                        "score1": 0,
+                        "score2": 0
+                    }
+                ],
+                "start_date": "2025-03-18 16:54:51.617944",
+                "end_date": null
+            },
+            {
+                "name": "Round 3",
+                "matches": [
+                    {
+                        "player1": {
+                            "last_name": "Enoto",
+                            "first_name": "Stevi",
+                            "birth_date": "30-07-1977",
+                            "chess_id": "fr12345",
+                            "score": 0
+                        },
+                        "player2": {
+                            "last_name": "Mentor",
+                            "first_name": "Fred",
+                            "birth_date": "01-01-1997",
+                            "chess_id": "fr11223",
+                            "score": 0
+                        },
+                        "score1": 0,
+                        "score2": 0
+                    },
+                    {
+                        "player1": {
+                            "last_name": "Dupond",
+                            "first_name": "Robert",
+                            "birth_date": "30-07-1979",
+                            "chess_id": "fr123456",
+                            "score": 0
+                        },
+                        "player2": {
+                            "last_name": "Menton",
+                            "first_name": "Fab",
+                            "birth_date": "01-02-1990",
+                            "chess_id": "fr112233",
+                            "score": 0
+                        },
+                        "score1": 0,
+                        "score2": 0
+                    }
+                ],
+                "start_date": "2025-03-19 10:04:22.818490",
+                "end_date": null
+            },
+            {
+                "name": "Round 4",
+                "matches": [
+                    {
+                        "player1": {
+                            "last_name": "Enoto",
+                            "first_name": "Stevi",
+                            "birth_date": "30-07-1977",
+                            "chess_id": "fr12345",
+                            "score": 0
+                        },
+                        "player2": {
+                            "last_name": "Mentor",
+                            "first_name": "Fred",
+                            "birth_date": "01-01-1997",
+                            "chess_id": "fr11223",
+                            "score": 0
+                        },
+                        "score1": 0,
+                        "score2": 0
+                    },
+                    {
+                        "player1": {
+                            "last_name": "Dupond",
+                            "first_name": "Robert",
+                            "birth_date": "30-07-1979",
+                            "chess_id": "fr123456",
+                            "score": 0
+                        },
+                        "player2": {
+                            "last_name": "Menton",
+                            "first_name": "Fab",
+                            "birth_date": "01-02-1990",
+                            "chess_id": "fr112233",
+                            "score": 0
+                        },
+                        "score1": 0,
+                        "score2": 0
+                    }
+                ],
+                "start_date": "2025-03-19 10:06:35.958355",
+                "end_date": null
+            }
+        ],
+        "notes": ""
+    }
+]
