@@ -80,7 +80,10 @@ Format accepté : 1-0, 0.5-0.5, 0-1
 
 ###  Menu principal
 ![interface_console.PNG](captures/interface_console.PNG)
+
+###  Fhichier Markdown
 ![markdown_tournoi.PNG](captures/markdown_tournoi.PNG)
+
 ###  Classement
 ![Tournoi_en_cours.PNG](captures/Tournoi_en_cours.PNG)
 
