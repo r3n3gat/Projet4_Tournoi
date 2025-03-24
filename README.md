@@ -45,8 +45,7 @@ python tournoi/main.py
 
 ## ⚙️ Arborescence du projet
 
-<pre><code> ``` Projet4_Tournoi/ ├── tournoi/ │ ├── main.py │ ├── controllers/ │ │ └── tournament_controller.py │ ├── models/ │ │ ├── player.py │ │ ├── tournament.py │ │ ├── round.py │ │ └── data_manager.py │ ├── views/ │ │ └── display.py │ ├── data/ │ │ ├── players.json │ │ └── tournaments.json │ └── utils/ │ ├── html_exporter.py │ └── markdown_exporter.py ├── exports/ ├── flake8_rapport/ ├── requirements.txt └── README.md ``` </code></pre>
-
+<pre><code> ``` Projet4_Tournoi/ ├── tournoi/ │ ├── main.py │ ├── controllers/ │ │ └── tournament_controller.py │ ├── models/ │ │ ├── player.py │ │ ├── tournament.py │ │ ├── round.py │ │ ├── match.py │ │ └── data_manager.py │ ├── views/ │ │ └── display.py │ ├── data/ │ │ ├── players.json │ │ └── tournaments.json │ └── utils/ │ ├── html_exporter.py │ └── markdown_exporter.py ├── exports/ │ ├── tournoi_*.html │ └── rapport_*.md ├── flake8_rapport/ │ └── index.html ├── requirements.txt └── README.md ``` </code></pre>
 ## ⚙️ Démo rapide
 
 1.  **Créer un tournoi de test** :
