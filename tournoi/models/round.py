@@ -33,7 +33,7 @@ class Round:
         from .match import Match
         matchs = [Match.from_dict(m) for m in data.get("matchs", [])]
         return cls(
-            nom=data.get("nom", "Round inconnu"),  # valeur par défaut
+            nom=data.get("nom", "Round inconnu"),
             start_date=data.get("start_date", ""),
             end_date=data.get("end_date", ""),
             matchs=matchs
@@ -42,7 +42,7 @@ class Round:
     @staticmethod
     def generate_pairs(players, previous_matches=None):
         """
-        Génére des paires de joueurs :
+        Génère des paires de joueurs :
         - 1er round : aléatoire
         - Sinon : classement par score
         - Évite les doublons si previous_matches fourni (liste de tuples de IDs)
@@ -54,10 +54,10 @@ class Round:
         previous_matches = previous_matches or []
         pairs = []
 
-        # Tri des joueurs par score pour les rounds suivants
+        # Tri par score décroissant
         players_sorted = sorted(players, key=lambda p: p.score, reverse=True)
-
         used = set()
+
         for i in range(len(players_sorted)):
             if i in used:
                 continue
@@ -66,15 +66,15 @@ class Round:
                 if j in used:
                     continue
                 p2 = players_sorted[j]
-                # Vérifie si la paire a déjà été jouée
                 if (p1.id, p2.id) not in previous_matches and (p2.id, p1.id) not in previous_matches:
                     pairs.append((p1, p2))
                     used.update([i, j])
                     break
 
-        # Si on ne peut pas générer assez de paires
+        # Si on ne peut pas générer assez de paires sans doublon
         if len(pairs) < len(players) // 2:
-            print("[WARN] Paires incomplètes, génération aléatoire de secours.")
+            print("[⚠️] Tous les joueurs se sont déjà affrontés.")
+            print("[INFO] Appariement aléatoire activé pour compléter le round.")
             random.shuffle(players)
             pairs = [(players[i], players[i + 1]) for i in range(0, len(players) - 1, 2)]
 

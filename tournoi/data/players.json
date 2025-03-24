@@ -12,5 +12,12 @@
         "birth_date": "19/08/1981",
         "chess_id": "fr789456",
         "score": 0
+    },
+    {
+        "last_name": "martin sonia",
+        "first_name": "sonia",
+        "birth_date": "19/08/1981",
+        "chess_id": "fr753423",
+        "score": 0
     }
 ]
