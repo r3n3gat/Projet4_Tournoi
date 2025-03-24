@@ -1,0 +1,16 @@
+[
+    {
+        "last_name": "Romeo",
+        "first_name": "Martin",
+        "birth_date": "01/09/2020",
+        "chess_id": "fr321654",
+        "score": 0
+    },
+    {
+        "last_name": "Martin",
+        "first_name": "Sonia",
+        "birth_date": "19/08/1981",
+        "chess_id": "fr789456",
+        "score": 0
+    }
+]

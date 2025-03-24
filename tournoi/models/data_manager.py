@@ -34,6 +34,22 @@ class DataManager:
                 print(f"[ERREUR] 📂 Fichier JSON corrompu : {self.players_file}")
                 return []
 
+    def add_player(self, player):
+        """
+        ➕ Ajoute un joueur à players.json s’il n’existe pas encore (via son identifiant).
+        :param player: Instance de Player
+        :return: True si ajouté, False sinon
+        """
+        players = self.load_players()
+        if any(p.id == player.id for p in players):
+            print(f"[⚠️] Le joueur avec l’ID {player.id} existe déjà.")
+            return False
+
+        players.append(player)
+        self.save_players(players)
+        print(f"[✅] Joueur {player.prenom} {player.nom} ajouté avec succès.")
+        return True
+
     # ✅ Gestion des tournois
     def save_tournaments(self, tournaments):
         """💾 Sauvegarde une liste de tournois dans tournaments.json"""
@@ -69,10 +85,13 @@ if __name__ == "__main__":
     p3 = Player("Dupond", "Robert", "30-07-1979", "fr123456")
     p4 = Player("Menton", "Fab", "01-01-1997", "fr112233")
 
-    players = [p1, p2, p3, p4]
+    # 🔽 Ajout d’un joueur unique
+    manager.add_player(p1)
+    manager.add_player(p2)
+    manager.add_player(p3)
+    manager.add_player(p4)
 
-    # 🔽 Sauvegarde et Chargement des joueurs
-    manager.save_players(players)
+    # 🔽 Chargement des joueurs
     loaded_players = manager.load_players()
     print("\n[INFO] 📂 Joueurs chargés depuis JSON :")
     for player in loaded_players:

@@ -5,11 +5,16 @@ class Player:
         self.last_name = last_name
         self.first_name = first_name
         self.birth_date = birth_date
-        self.chess_id = chess_id
-        self.score = score  # Score initialisé à 0
+        self.chess_id = chess_id  # Identifiant unique
+        self.score = score  # Score cumulé dans le tournoi
 
     def __repr__(self):
         return f"<Player {self.first_name} {self.last_name} - ID: {self.chess_id} - Score: {self.score}>"
+
+    @property
+    def id(self):
+        """Alias pratique pour l'identifiant d'échecs."""
+        return self.chess_id
 
     def to_dict(self):
         """Convertit l'objet en dictionnaire pour JSON."""
@@ -26,9 +31,9 @@ class Player:
         """Crée un objet Player à partir d'un dictionnaire JSON."""
         return cls(**data)
 
+
 if __name__ == "__main__":
-    # ✅ Tester uniquement le chargement des joueurs sans importer DataManager ici
     print("\n[INFO] ✅ Test de la classe Player")
-    player = Player("Enoto", "Stevi", "30-07-1977", "fr12345")
+    player = Player("Enoto", "Stevi", "30-07-1977", "FR12345")
     print(player)
     print(player.to_dict())
