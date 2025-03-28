@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>tournoi\models\round.py - flake8 annotated source</title>
+      <title>models\round.py - flake8 annotated source</title>
       <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
       <link rel="stylesheet" href="styles.css">
    </head>
@@ -9,9 +9,9 @@
       <div id="masthead" class="sev-2"></div>
       <div id="page">
          <h1>
-            <a href="tournoi.models.round.report.html">
+            <a href="models.round.report.html">
                <img src="back.svg" alt="&#x2B05;">
-               tournoi\models\round.py source
+               models\round.py source
             </a>
          </h1>
 
@@ -35,7 +35,7 @@
                class="code sev- "><tt><i>6</i> <span class="k">class</span><span class="w"> </span><span class="nc">Round</span><span class="p">:</span></tt>
             </div>
             <div id="l7"
-               class="code sev- "><tt><i>7</i> <span class="w">    </span><span class="sd">&quot;&quot;&quot;Modèle représentant un round dans un tournoi.&quot;&quot;&quot;</span></tt>
+               class="code sev- "><tt><i>7</i> <span class="w">    </span><span class="sd">&quot;&quot;&quot;Modèle représentant un round d&#39;un tournoi.&quot;&quot;&quot;</span></tt>
             </div>
             <div id="l8"
                class="code sev- "><tt><i>8</i> &nbsp;</tt>
@@ -113,7 +113,7 @@
                class="code sev- "><tt><i>32</i>     <span class="k">def</span><span class="w"> </span><span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span></tt>
             </div>
             <div id="l33"
-               class="code sev- "><tt><i>33</i>         <span class="kn">from</span><span class="w"> </span><span class="nn">.match</span><span class="w"> </span><span class="kn">import</span> <span class="n">Match</span></tt>
+               class="code sev- "><tt><i>33</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Recrée un round à partir d’un dictionnaire.&quot;&quot;&quot;</span></tt>
             </div>
             <div id="l34"
                class="code sev- "><tt><i>34</i>         <span class="n">matchs</span> <span class="o">=</span> <span class="p">[</span><span class="n">Match</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;matchs&quot;</span><span class="p">,</span> <span class="p">[])]</span></tt>
@@ -122,7 +122,7 @@
                class="code sev- "><tt><i>35</i>         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span></tt>
             </div>
             <div id="l36"
-               class="code sev- "><tt><i>36</i>             <span class="n">nom</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;nom&quot;</span><span class="p">,</span> <span class="s2">&quot;Round inconnu&quot;</span><span class="p">),</span>  <span class="c1"># valeur par défaut</span></tt>
+               class="code sev- "><tt><i>36</i>             <span class="n">nom</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;nom&quot;</span><span class="p">,</span> <span class="s2">&quot;Round inconnu&quot;</span><span class="p">),</span></tt>
             </div>
             <div id="l37"
                class="code sev- "><tt><i>37</i>             <span class="n">start_date</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;start_date&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">),</span></tt>
@@ -149,25 +149,16 @@
                class="code sev- "><tt><i>44</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span></tt>
             </div>
             <div id="l45"
-               class="code sev- "><tt><i>45</i> <span class="sd">        Génére des paires de joueurs :</span></tt>
+               class="code sev- "><tt><i>45</i> <span class="sd">        Génère les paires de joueurs :</span></tt>
             </div>
             <div id="l46"
-               class="code sev- "><tt><i>46</i> <span class="sd">        - 1er round : aléatoire</span></tt>
+               class="code sev- "><tt><i>46</i> <span class="sd">        - Premier round : aléatoire</span></tt>
             </div>
             <div id="l47"
-               class="code sev- "><tt><i>47</i> <span class="sd">        - Sinon : classement par score</span></tt>
+               class="code sev- "><tt><i>47</i> <span class="sd">        - Rounds suivants : appariement par score décroissant</span></tt>
             </div>
             <div id="l48"
-               class="code sev-2  le">
-               <ul class="violations">
-               
-                  <li>
-                     <span class="count sev-2">
-                        E501
-                     </span>
-                     Line too long (80 > 79 characters)</li>
-               
-               </ul><tt><i>48</i> <span class="sd">        - Évite les doublons si previous_matches fourni (liste de tuples de IDs)</span></tt>
+               class="code sev- "><tt><i>48</i> <span class="sd">        - Évite autant que possible les doublons via previous_matches</span></tt>
             </div>
             <div id="l49"
                class="code sev- "><tt><i>49</i> <span class="sd">        &quot;&quot;&quot;</span></tt>
@@ -191,19 +182,19 @@
                class="code sev- "><tt><i>55</i>         <span class="n">pairs</span> <span class="o">=</span> <span class="p">[]</span></tt>
             </div>
             <div id="l56"
-               class="code sev- "><tt><i>56</i> &nbsp;</tt>
+               class="code sev- "><tt><i>56</i>         <span class="n">used</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></tt>
             </div>
             <div id="l57"
-               class="code sev- "><tt><i>57</i>         <span class="c1"># Tri des joueurs par score pour les rounds suivants</span></tt>
+               class="code sev- "><tt><i>57</i> &nbsp;</tt>
             </div>
             <div id="l58"
-               class="code sev- "><tt><i>58</i>         <span class="n">players_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">players</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">p</span><span class="o">.</span><span class="n">score</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>58</i>         <span class="c1">#  Tri des joueurs par score</span></tt>
             </div>
             <div id="l59"
-               class="code sev- "><tt><i>59</i> &nbsp;</tt>
+               class="code sev- "><tt><i>59</i>         <span class="n">players_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">players</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">p</span><span class="o">.</span><span class="n">score</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></tt>
             </div>
             <div id="l60"
-               class="code sev- "><tt><i>60</i>         <span class="n">used</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span></tt>
+               class="code sev- "><tt><i>60</i> &nbsp;</tt>
             </div>
             <div id="l61"
                class="code sev- "><tt><i>61</i>         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">players_sorted</span><span class="p">)):</span></tt>
@@ -218,93 +209,54 @@
                class="code sev- "><tt><i>64</i>             <span class="n">p1</span> <span class="o">=</span> <span class="n">players_sorted</span><span class="p">[</span><span class="n">i</span><span class="p">]</span></tt>
             </div>
             <div id="l65"
-               class="code sev- "><tt><i>65</i>             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">players_sorted</span><span class="p">)):</span></tt>
+               class="code sev- "><tt><i>65</i> &nbsp;</tt>
             </div>
             <div id="l66"
-               class="code sev- "><tt><i>66</i>                 <span class="k">if</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">used</span><span class="p">:</span></tt>
+               class="code sev- "><tt><i>66</i>             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">players_sorted</span><span class="p">)):</span></tt>
             </div>
             <div id="l67"
-               class="code sev- "><tt><i>67</i>                     <span class="k">continue</span></tt>
+               class="code sev- "><tt><i>67</i>                 <span class="k">if</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">used</span><span class="p">:</span></tt>
             </div>
             <div id="l68"
-               class="code sev- "><tt><i>68</i>                 <span class="n">p2</span> <span class="o">=</span> <span class="n">players_sorted</span><span class="p">[</span><span class="n">j</span><span class="p">]</span></tt>
+               class="code sev- "><tt><i>68</i>                     <span class="k">continue</span></tt>
             </div>
             <div id="l69"
-               class="code sev- "><tt><i>69</i>                 <span class="c1"># Vérifie si la paire a déjà été jouée</span></tt>
+               class="code sev- "><tt><i>69</i>                 <span class="n">p2</span> <span class="o">=</span> <span class="n">players_sorted</span><span class="p">[</span><span class="n">j</span><span class="p">]</span></tt>
             </div>
             <div id="l70"
-               class="code sev-2  le">
-               <ul class="violations">
-               
-                  <li>
-                     <span class="count sev-2">
-                        E501
-                     </span>
-                     Line too long (101 > 79 characters)</li>
-               
-               </ul><tt><i>70</i>                 <span class="k">if</span> <span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">p2</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">previous_matches</span> <span class="ow">and</span> <span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">p1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">previous_matches</span><span class="p">:</span></tt>
+               class="code sev- "><tt><i>70</i>                 <span class="c1"># Évite les re-matches</span></tt>
             </div>
             <div id="l71"
-               class="code sev- "><tt><i>71</i>                     <span class="n">pairs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">))</span></tt>
+               class="code sev- "><tt><i>71</i>                 <span class="k">if</span> <span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">chess_id</span><span class="p">,</span> <span class="n">p2</span><span class="o">.</span><span class="n">chess_id</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">previous_matches</span> <span class="ow">and</span> <span class="p">(</span></tt>
             </div>
             <div id="l72"
-               class="code sev- "><tt><i>72</i>                     <span class="n">used</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span></tt>
+               class="code sev- "><tt><i>72</i>                     <span class="n">p2</span><span class="o">.</span><span class="n">chess_id</span><span class="p">,</span> <span class="n">p1</span><span class="o">.</span><span class="n">chess_id</span></tt>
             </div>
             <div id="l73"
-               class="code sev- "><tt><i>73</i>                     <span class="k">break</span></tt>
+               class="code sev- "><tt><i>73</i>                 <span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">previous_matches</span><span class="p">:</span></tt>
             </div>
             <div id="l74"
-               class="code sev- "><tt><i>74</i> &nbsp;</tt>
+               class="code sev- "><tt><i>74</i>                     <span class="n">pairs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">))</span></tt>
             </div>
             <div id="l75"
-               class="code sev- "><tt><i>75</i>         <span class="c1"># Si on ne peut pas générer assez de paires</span></tt>
+               class="code sev- "><tt><i>75</i>                     <span class="n">used</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span></tt>
             </div>
             <div id="l76"
-               class="code sev- "><tt><i>76</i>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pairs</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">players</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:</span></tt>
+               class="code sev- "><tt><i>76</i>                     <span class="k">break</span></tt>
             </div>
             <div id="l77"
-               class="code sev-2  le">
-               <ul class="violations">
-               
-                  <li>
-                     <span class="count sev-2">
-                        E501
-                     </span>
-                     Line too long (80 > 79 characters)</li>
-               
-               </ul><tt><i>77</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[WARN] Paires incomplètes, génération aléatoire de secours.&quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>77</i> &nbsp;</tt>
             </div>
             <div id="l78"
-               class="code sev- "><tt><i>78</i>             <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">players</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>78</i>         <span class="c1">#  Si paires incomplètes → appariement aléatoire en secours</span></tt>
             </div>
             <div id="l79"
-               class="code sev-2  le">
-               <ul class="violations">
-               
-                  <li>
-                     <span class="count sev-2">
-                        E501
-                     </span>
-                     Line too long (89 > 79 characters)</li>
-               
-               </ul><tt><i>79</i>             <span class="n">pairs</span> <span class="o">=</span> <span class="p">[(</span><span class="n">players</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">players</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">players</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span></tt>
+               class="code sev- "><tt><i>79</i>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pairs</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">players</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">:</span></tt>
             </div>
             <div id="l80"
-               class="code sev- "><tt><i>80</i> &nbsp;</tt>
+               class="code sev- "><tt><i>80</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Tous les joueurs se sont déjà affrontés.&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l81"
-               class="code sev- "><tt><i>81</i>         <span class="k">return</span> <span class="n">pairs</span></tt>
-            </div>
-            <div id="l82"
-               class="code sev- "><tt><i>82</i> &nbsp;</tt>
-            </div>
-            <div id="l83"
-               class="code sev- "><tt><i>83</i>     <span class="nd">@classmethod</span></tt>
-            </div>
-            <div id="l84"
-               class="code sev- "><tt><i>84</i>     <span class="k">def</span><span class="w"> </span><span class="nf">create_round</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">players</span><span class="p">,</span> <span class="n">previous_matches</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
-            </div>
-            <div id="l85"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -312,18 +264,51 @@
                      <span class="count sev-2">
                         E501
                      </span>
-                     Line too long (84 > 79 characters)</li>
+                     Line too long (81 > 79 characters)</li>
                
-               </ul><tt><i>85</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Crée un round complet avec les paires générées et les matchs associés.&quot;&quot;&quot;</span></tt>
+               </ul><tt><i>81</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;[INFO] Appariement aléatoire activé pour compléter le round.&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l82"
+               class="code sev- "><tt><i>82</i>             <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">players</span><span class="p">)</span></tt>
+            </div>
+            <div id="l83"
+               class="code sev- "><tt><i>83</i>             <span class="n">pairs</span> <span class="o">=</span> <span class="p">[</span></tt>
+            </div>
+            <div id="l84"
+               class="code sev- "><tt><i>84</i>                 <span class="p">(</span><span class="n">players</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">players</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span></tt>
+            </div>
+            <div id="l85"
+               class="code sev- "><tt><i>85</i>                 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">players</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></tt>
             </div>
             <div id="l86"
-               class="code sev- "><tt><i>86</i>         <span class="n">pairs</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">generate_pairs</span><span class="p">(</span><span class="n">players</span><span class="p">,</span> <span class="n">previous_matches</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>86</i>             <span class="p">]</span></tt>
             </div>
             <div id="l87"
-               class="code sev- "><tt><i>87</i>         <span class="n">matchs</span> <span class="o">=</span> <span class="p">[</span><span class="n">Match</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span> <span class="k">for</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">]</span></tt>
+               class="code sev- "><tt><i>87</i> &nbsp;</tt>
             </div>
             <div id="l88"
-               class="code sev- "><tt><i>88</i>         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">nom</span><span class="o">=</span><span class="n">nom</span><span class="p">,</span> <span class="n">matchs</span><span class="o">=</span><span class="n">matchs</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>88</i>         <span class="k">return</span> <span class="n">pairs</span></tt>
+            </div>
+            <div id="l89"
+               class="code sev- "><tt><i>89</i> &nbsp;</tt>
+            </div>
+            <div id="l90"
+               class="code sev- "><tt><i>90</i>     <span class="nd">@classmethod</span></tt>
+            </div>
+            <div id="l91"
+               class="code sev- "><tt><i>91</i>     <span class="k">def</span><span class="w"> </span><span class="nf">create_round</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">players</span><span class="p">,</span> <span class="n">previous_matches</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+            </div>
+            <div id="l92"
+               class="code sev- "><tt><i>92</i> <span class="w">        </span><span class="sd">&quot;&quot;&quot;Crée un round avec les matchs générés automatiquement.&quot;&quot;&quot;</span></tt>
+            </div>
+            <div id="l93"
+               class="code sev- "><tt><i>93</i>         <span class="n">pairs</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">generate_pairs</span><span class="p">(</span><span class="n">players</span><span class="p">,</span> <span class="n">previous_matches</span><span class="p">)</span></tt>
+            </div>
+            <div id="l94"
+               class="code sev- "><tt><i>94</i>         <span class="n">matchs</span> <span class="o">=</span> <span class="p">[</span><span class="n">Match</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">)</span> <span class="k">for</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">]</span></tt>
+            </div>
+            <div id="l95"
+               class="code sev- "><tt><i>95</i>         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">nom</span><span class="o">=</span><span class="n">nom</span><span class="p">,</span> <span class="n">matchs</span><span class="o">=</span><span class="n">matchs</span><span class="p">)</span></tt>
             </div>
             
          </div>

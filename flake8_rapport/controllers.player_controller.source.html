@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>tournoi\controllers\player_controller.py - flake8 annotated source</title>
+      <title>controllers\player_controller.py - flake8 annotated source</title>
       <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
       <link rel="stylesheet" href="styles.css">
    </head>
@@ -9,9 +9,9 @@
       <div id="masthead" class="sev-2"></div>
       <div id="page">
          <h1>
-            <a href="tournoi.controllers.player_controller.report.html">
+            <a href="controllers.player_controller.report.html">
                <img src="back.svg" alt="&#x2B05;">
-               tournoi\controllers\player_controller.py source
+               controllers\player_controller.py source
             </a>
          </h1>
 
@@ -59,13 +59,13 @@
                class="code sev- "><tt><i>14</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== GESTION DES JOUEURS ===&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l15"
-               class="code sev- "><tt><i>15</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. ➕ Ajouter un joueur&quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>15</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Ajouter un joueur&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l16"
-               class="code sev- "><tt><i>16</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. 📋 Lister les joueurs&quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>16</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Lister les joueurs&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l17"
-               class="code sev- "><tt><i>17</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. 🔙 Retour&quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>17</i>             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Retour&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l18"
                class="code sev- "><tt><i>18</i> &nbsp;</tt>
@@ -119,25 +119,25 @@
                class="code sev- "><tt><i>31</i>     <span class="k">def</span><span class="w"> </span><span class="nf">add_player</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
             </div>
             <div id="l32"
-               class="code sev- "><tt><i>32</i>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== ➕ AJOUTER UN JOUEUR ===&quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>32</i>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== AJOUTER UN JOUEUR ===&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l33"
-               class="code sev- "><tt><i>33</i>         <span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nom : &quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>33</i>         <span class="n">last_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Nom : &quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l34"
-               class="code sev- "><tt><i>34</i>         <span class="n">prenom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Prénom : &quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>34</i>         <span class="n">first_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Prénom : &quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l35"
-               class="code sev- "><tt><i>35</i>         <span class="n">date_naissance</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Date de naissance (jj-mm-aaaa) : &quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>35</i>         <span class="n">birth_date</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Date de naissance (jj-mm-aaaa) : &quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l36"
-               class="code sev- "><tt><i>36</i>         <span class="n">identifiant</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Identifiant national (ex : AB12345) : &quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>36</i>         <span class="n">chess_id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Identifiant national (ex : AB12345) : &quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l37"
                class="code sev- "><tt><i>37</i> &nbsp;</tt>
             </div>
             <div id="l38"
-               class="code sev- "><tt><i>38</i>         <span class="n">new_player</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="n">prenom</span><span class="p">,</span> <span class="n">date_naissance</span><span class="p">,</span> <span class="n">identifiant</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>38</i>         <span class="n">new_player</span> <span class="o">=</span> <span class="n">Player</span><span class="p">(</span><span class="n">last_name</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">birth_date</span><span class="p">,</span> <span class="n">chess_id</span><span class="p">)</span></tt>
             </div>
             <div id="l39"
                class="code sev- "><tt><i>39</i>         <span class="n">success</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_manager</span><span class="o">.</span><span class="n">add_player</span><span class="p">(</span><span class="n">new_player</span><span class="p">)</span></tt>
@@ -149,7 +149,7 @@
                class="code sev- "><tt><i>41</i>         <span class="k">if</span> <span class="n">success</span><span class="p">:</span></tt>
             </div>
             <div id="l42"
-               class="code sev- "><tt><i>42</i>             <span class="n">display</span><span class="o">.</span><span class="n">message_succes</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Joueur </span><span class="si">{</span><span class="n">prenom</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">nom</span><span class="si">}</span><span class="s2"> ajouté.&quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>42</i>             <span class="n">display</span><span class="o">.</span><span class="n">message_succes</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Joueur </span><span class="si">{</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">last_name</span><span class="si">}</span><span class="s2"> ajouté.&quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l43"
                class="code sev- "><tt><i>43</i>         <span class="k">else</span><span class="p">:</span></tt>

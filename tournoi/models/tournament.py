@@ -5,7 +5,8 @@ from .player import Player
 class Tournament:
     """Modèle représentant un tournoi d'échecs."""
 
-    def __init__(self, nom, lieu, date_debut, date_fin, joueurs=None, rounds=None, remarques=""):
+    def __init__(self, nom, lieu, date_debut, date_fin,
+                 joueurs=None, rounds=None, remarques=""):
         self.nom = nom
         self.lieu = lieu
         self.date_debut = date_debut
@@ -47,9 +48,11 @@ class Tournament:
         )
 
     def add_round(self, round_):
+        """Ajoute un round au tournoi."""
         self.rounds.append(round_)
 
     def start_new_round(self):
+        """Crée un nouveau round avec appariement."""
         if len(self.rounds) >= 4:
             print("[INFO] Le tournoi a déjà 4 rounds. Terminé.")
             return None

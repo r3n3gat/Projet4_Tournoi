@@ -12,9 +12,9 @@ class PlayerController:
     def display_menu(self):
         while True:
             print("\n=== GESTION DES JOUEURS ===")
-            print("1. ➕ Ajouter un joueur")
-            print("2. 📋 Lister les joueurs")
-            print("3. 🔙 Retour")
+            print("1. Ajouter un joueur")
+            print("2. Lister les joueurs")
+            print("3. Retour")
 
             choice = input("Choisissez une option (1-3) : ")
 
@@ -29,7 +29,7 @@ class PlayerController:
                 display.message_erreur("Entrée invalide. Veuillez recommencer.")
 
     def add_player(self):
-        print("\n=== ➕ AJOUTER UN JOUEUR ===")
+        print("\n=== AJOUTER UN JOUEUR ===")
         last_name = input("Nom : ")
         first_name = input("Prénom : ")
         birth_date = input("Date de naissance (jj-mm-aaaa) : ")
