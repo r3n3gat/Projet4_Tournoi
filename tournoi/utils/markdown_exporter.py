@@ -43,4 +43,4 @@ def export_tournament_to_markdown(tournoi):
                 )
             f.write("\n")
 
-    print(f"✅ Rapport Markdown généré : {nom_fichier}")
+    print(f" Rapport Markdown généré : {nom_fichier}")

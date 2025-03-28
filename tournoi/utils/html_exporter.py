@@ -50,8 +50,8 @@ def export_tournament_to_html(tournoi):
                 )
             file.write("</table>")
 
-        file.write("<p style='margin-top: 40px;'><a href='#top'>⬆️ Retour en haut de page</a></p>")
+        file.write("<p style='margin-top: 40px;'><a href='#top'> Retour en haut de page</a></p>")
         file.write("</body></html>")
 
-    print(f"✅ Rapport HTML généré : {path}")
+    print(f"Rapport HTML généré : {path}")
     webbrowser.open(f"file://{os.path.abspath(path)}")

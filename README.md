@@ -22,7 +22,7 @@
 
 1. **Cloner le repo** :
 
-git clone https://github.com/<ton_nom>/Projet4_Tournoi.git
+git clone https://github.com/r3n3gat/Projet4_Tournoi
 cd Projet4_Tournoi
 
 2. **Créer un environnement virtuel** :
@@ -42,8 +42,6 @@ pip install -r requirements.txt
 python tournoi/main.py
 
 
-
-## ⚙️ Arborescence du projet
 
 ## 📂 Arborescence du projet
 
@@ -128,8 +126,8 @@ Interface Markdown	✅
 Export HTML	✅
 Tournoi de test	✅
 Gestion des scores rapides	✅
-Interface graphique (Tkinter)	❌
-Interface web (Flask)	❌
+Interface graphique (markdown et html)	✅
+
 
 
 ## ⚙️ Concepts appliqués

@@ -9,9 +9,9 @@ class DataManager:
 
     def __init__(self, data_folder="data"):
         self.data_folder = data_folder
-        os.makedirs(self.data_folder, exist_ok=True)
-        self.players_file = os.path.join(self.data_folder, "players.json")
-        self.tournaments_file = os.path.join(self.data_folder, "tournaments.json")
+        os.makedirs(data_folder, exist_ok=True)
+        self.players_file = os.path.join(data_folder, "players.json")
+        self.tournaments_file = os.path.join(data_folder, "tournaments.json")
 
     # ──────────────── Gestion des Joueurs ────────────────
     def save_players(self, players):
@@ -46,7 +46,9 @@ class DataManager:
     def save_tournaments(self, tournaments):
         """Sauvegarde une liste de tournois dans tournaments.json."""
         with open(self.tournaments_file, "w", encoding="utf-8") as file:
-            json.dump([t.to_dict() for t in tournaments], file, indent=4, ensure_ascii=False)
+            json.dump(
+                [t.to_dict() for t in tournaments],
+                file, indent=4, ensure_ascii=False)
 
     def load_tournaments(self):
         """Charge la liste des tournois depuis tournaments.json."""
