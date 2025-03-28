@@ -1,18 +1,22 @@
 import os
+from datetime import datetime
 
 
 def export_tournament_to_markdown(tournoi):
     """
     Exporte un tournoi au format Markdown dans le dossier 'exports/'.
-    Le fichier est nommé : rapport_<nom-tournoi>.md
+    Le fichier est nommé : rapport_<nom-tournoi>_<datetime>.md
     """
     os.makedirs("exports", exist_ok=True)
-    nom_fichier = f"exports/rapport_{tournoi.nom.lower().replace(' ', '_')}.md"
+    now = datetime.now().strftime("%Y-%m-%d_%H-%M")
+    nom_fichier = f"exports/rapport_{tournoi.nom.lower().replace(' ', '_')}_{now}.md"
 
     with open(nom_fichier, "w", encoding="utf-8") as f:
         f.write(f"# Rapport du tournoi : {tournoi.nom}\n\n")
         f.write(f"**Lieu :** {tournoi.lieu}\n\n")
         f.write(f"**Dates :** du {tournoi.date_debut} au {tournoi.date_fin}\n\n")
+        f.write(f"_Rapport généré le {datetime.now().strftime('%d/%m/%Y à %H:%M')}_\n\n")
+
         if tournoi.remarques:
             f.write(f"**Remarques :** {tournoi.remarques}\n\n")
 
@@ -39,4 +43,4 @@ def export_tournament_to_markdown(tournoi):
                 )
             f.write("\n")
 
-    print(f"Rapport Markdown généré : {nom_fichier}")
+    print(f"✅ Rapport Markdown généré : {nom_fichier}")
